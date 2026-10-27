@@ -1,21 +1,35 @@
-import { Component } from "react";
 
+import { Component } from "react";
+import styles from "./GameItem.module.css";
 
 class Item extends Component {
-    render(){
-        const {title, genre, rating, status, onDelete } = this.props
-        return(
-            <li>
-                <h2>{title}</h2>
-                <p>{genre}</p>
-                <p>{rating}</p>
-                <p>{status}</p>
-                <button type="button" onClick={onDelete}>
-                    Delete
-                </button>
-            </li>            
-        )
-    }
+  render() {
+    const { title, genre, rating, status, onDelete } = this.props;
+
+    return (
+      <li className={styles.card}>
+        <h2 className={styles.title}>{title}</h2>
+
+        <p className={styles.genre}>{genre}</p>
+
+        <span className={styles.rating}>
+          ⭐ {rating}/10
+        </span>
+
+        <span className={`${styles.status} ${styles[status]}`}>
+          {status}
+        </span>
+
+        <button
+          className={styles.deleteButton}
+          type="button"
+          onClick={onDelete}
+        >
+          Delete Game
+        </button>
+      </li>
+    );
+  }
 }
 
-export default Item
+export default Item;

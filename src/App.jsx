@@ -83,24 +83,29 @@ class App extends Component {
 
 
   render(){
-    const {title, genre, rating, status, search, games} = this.state
-    return(
-      <>
-      <Form
+    const {title, genre, rating, status, games} = this.state
+  return (
+  <div className="container">
+    <header className="header">
+      <h1>🎮 Game Library</h1>
+      <p>Manage your personal game collection</p>
+    </header>
+
+    <Form
       title={title}
       genre={genre}
       rating={rating}
       status={status}
-      search={search}
       onSubmit={this.handleSubmit}
       onChange={this.handleChange}
-      />
-      <List 
+    />
+
+    <List
       games={games}
       onDelete={this.handleDelete}
-      />
-      </>
-    )
+    />
+  </div>
+);
   }
 }
 

@@ -1,0 +1,73 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: #1d2031;
+  border: 1px solid #303348;
+  border-radius: 16px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #7557e8;
+}
+
+.title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.genre {
+  margin: 0;
+  font-size: 14px;
+  color: #a5a8c0;
+}
+
+.rating {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffc857;
+}
+
+.status {
+  align-self: flex-start;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.playing {
+  background: #1d443a;
+  color: #63e6be;
+}
+
+.completed {
+  background: #203d65;
+  color: #74b9ff;
+}
+
+.planned {
+  background: #554020;
+  color: #ffd166;
+}
+
+.deleteButton {
+  margin-top: auto;
+  padding: 11px 15px;
+  background: #382638;
+  color: #ff858f;
+  border: 1px solid #563545;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.deleteButton:hover {
+  background: #653044;
+}
